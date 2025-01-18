@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    height:100vh;
+background: url("https://png.pngtree.com/thumb_back/fh260/background/20230415/pngtree-website-technology-line-dark-background-image_2344719.jpg") no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+.head::before{
+    content:'';
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:49px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 18px;
+    background-color: hsla(0, 0%, 4%, 0.973);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+    
+    
+
+}
+.head{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:49px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 18px;
+}
+
+
+img{
+    z-index:1;
+    border-radius:30%;
+    position: fixed;
+    top:0;
+    left:0;
+}
+a::before{
+    content:'';
+    color:aqua;
+    
+}
+a{
+    text-decoration: none;
+    font-size: small;
+    padding:5px;
+    color:white;
+    cursor: pointer;
+    outline: none;
+}
+h2{
+    position: absolute;
+    top:55%;
+    left:30%;
+    color:aqua;
+    z-index:-1;
+
+}
+ a:hover{
+color:rgb(88, 240, 139)
+    
+}
+ label #open{
+    display: none;
+
+ }
+ label #close{
+    display: none;
+ }
+#check{
+    display: none;
+}
+/*here from responsive media queries are have to be used*/
+@media (max-width: 998px){
+    .head{
+        padding: 3px;
+    }
+    
+}
+@media (max-width: 648px){
+    h2{
+        position: absolute;
+        top:40%;
+        right:10%;
+    }
+    .navbar{
+        width: 140px;
+          height:auto;
+          position:absolute;
+          top:70px;
+          left:70%;
+          transform: translateX(200px);
+          transition: 1s ease; 
+          border:1px solid white;
+          box-shadow: 0px 0px  10px yellow;
+         backdrop-filter: blur(8px);
+      
+    }
+    .navbar a{
+        display:block;
+        padding:15px;
+        text-align:center;
+        cursor: pointer;
+        
+       
+       
+    }
+    a:hover{
+        color:#e913d3;
+
+    }
+    label #open, label #close{
+        display:block;  
+        visibility: visible;
+        position: absolute;
+        z-index:1;
+        cursor: pointer;
+    }
+    label #open{
+        top:20%;
+        right:4%;
+        font-size: 1.4rem;
+        color:aliceblue;
+    }
+    label #close{
+        top:21%;
+        right:4%;
+        font-size: 1.5rem;
+         display:none;
+        color:aliceblue;
+    }    
+    #check:checked ~ .navbar{
+       transform: translatex(0px);
+       transition: 1s ease;
+    }
+    #check:checked ~ label #open{
+        display:none;
+        visibility: hidden;
+    }
+
+    #check:checked ~ label #close{
+        display: block;
+        
+    }
+}
+    
